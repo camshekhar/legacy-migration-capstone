@@ -1,0 +1,15 @@
+.env
+myenv/
+env/
+credentials.json
+__pycache__/
+*.pyc
+.myenv/
+venv/
+artifacts/checkpoints.sqlite
+artifacts/*.json
+!artifacts/.gitkeep
+dbt_models/target/
+dbt_models/logs/
+dbt_models/dbt_packages/
+.DS_Store

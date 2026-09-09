@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  legacy-mysql:
+    image: mysql:8.0
+    container_name: legacy_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: legacy_db
+      MYSQL_USER: legacy_user
+      MYSQL_PASSWORD: legacy_pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./seed_db/01_schema.sql:/docker-entrypoint-initdb.d/01_schema.sql
+      - legacy_mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-prootpass"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  legacy_mysql_data:

@@ -1,0 +1,13 @@
+name: 'legacy_migration_validation'
+version: '1.0.0'
+config-version: 2
+
+profile: 'legacy_migration_validation'
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  legacy_migration_validation:
+    +materialized: view

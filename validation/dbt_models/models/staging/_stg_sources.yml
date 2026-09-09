@@ -1,0 +1,37 @@
+version: 2
+
+# These sources point at the tables migration_executor.py loads
+# (stg_<source_table_name>). Primary keys are mapped 1:1 by ai_mapper
+# (see agents/ai_mapper.py), so their names are stable across runs even
+# though other column names are AI-generated and vary per mapping run.
+#
+# IMPORTANT: after your first pipeline run, open
+# artifacts/target_data_dictionary.md and add column-specific tests below
+# (not_null / accepted_values) for the renamed business columns — this file
+# ships with only the structural checks that are guaranteed to hold.
+
+sources:
+  - name: staging
+    database: "{{ env_var('SNOWFLAKE_DATABASE') }}"
+    schema: "{{ env_var('SNOWFLAKE_SCHEMA') }}"
+    tables:
+      - name: stg_insurance_plans
+        columns:
+          - name: plan_id
+            tests: [unique, not_null]
+      - name: stg_providers
+        columns:
+          - name: prov_id
+            tests: [unique, not_null]
+      - name: stg_patient_records
+        columns:
+          - name: pat_id
+            tests: [unique, not_null]
+      - name: stg_encounters
+        columns:
+          - name: enc_id
+            tests: [unique, not_null]
+      - name: stg_billing_transactions
+        columns:
+          - name: txn_id
+            tests: [unique, not_null]

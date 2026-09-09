@@ -1,0 +1,33 @@
+# --- Core ---
+python-dotenv==1.0.1
+sqlalchemy==2.0.35
+pymysql==1.1.1
+cryptography==43.0.1        # required by pymysql for auth plugins
+
+# --- Data seeding ---
+faker==28.4.1
+
+# --- AI / Agent orchestration ---
+langchain==0.3.7
+langchain-google-genai==2.0.4
+langgraph==0.2.39
+langgraph-checkpoint-sqlite==2.0.1
+google-generativeai==0.8.3
+pydantic==2.9.2
+
+# --- Observability ---
+langfuse==2.53.9
+
+# --- Data quality ---
+great_expectations==0.18.19
+
+# --- Post-migration validation / lineage ---
+dbt-core==1.8.7
+dbt-snowflake==1.8.4
+
+# --- Target warehouse ---
+snowflake-sqlalchemy==1.6.1
+snowflake-connector-python==3.12.2
+
+# --- CLI review UI ---
+rich==13.9.2

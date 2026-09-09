@@ -1,0 +1,1286 @@
+[
+  {
+    "event_id": "2331d47e-2c4b-43e6-8c01-983aeef4e94b",
+    "seq": 1,
+    "run_id": "unknown-run",
+    "timestamp_utc": "2026-09-07T12:29:40.589008+00:00",
+    "event_type": "schema_profiled",
+    "payload": {
+      "tables_profiled": [
+        "billing_transactions",
+        "encounters",
+        "insurance_plans",
+        "patient_records",
+        "providers"
+      ],
+      "total_row_count": 0,
+      "output_path": "artifacts/schema_profile.json"
+    }
+  },
+  {
+    "event_id": "439f3baa-887f-409a-a7fe-a410349d1f21",
+    "seq": 2,
+    "run_id": "unknown-run",
+    "timestamp_utc": "2026-09-07T12:30:55.700736+00:00",
+    "event_type": "schema_profiled",
+    "payload": {
+      "tables_profiled": [
+        "billing_transactions",
+        "encounters",
+        "insurance_plans",
+        "patient_records",
+        "providers"
+      ],
+      "total_row_count": 0,
+      "output_path": "artifacts/schema_profile.json"
+    }
+  },
+  {
+    "event_id": "3f7a7691-470c-463e-a714-10b0d108534f",
+    "seq": 3,
+    "run_id": "run-3d839b27-1fc5-49d2-9cca-5eb158748213",
+    "timestamp_utc": "2026-09-07T12:31:21.380558+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-d338f61c-7b88-4f5c-9748-f837b40bf0f4",
+      "table": "billing_transactions",
+      "column": "enc_id",
+      "confidence": 0.45
+    }
+  },
+  {
+    "event_id": "ed1df682-0a53-4ced-8e1e-969ced1276e8",
+    "seq": 4,
+    "run_id": "run-3d839b27-1fc5-49d2-9cca-5eb158748213",
+    "timestamp_utc": "2026-09-07T12:32:39.991490+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-83f92010-e384-470e-a82d-748c45ac7049",
+      "table": "billing_transactions",
+      "column": "txn_amt",
+      "confidence": 0.5
+    }
+  },
+  {
+    "event_id": "0e838163-fc28-4e5b-848a-6c8c15126e43",
+    "seq": 5,
+    "run_id": "run-3d839b27-1fc5-49d2-9cca-5eb158748213",
+    "timestamp_utc": "2026-09-07T12:33:08.915703+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-879b899e-31be-433d-a342-47175a54f6ce",
+      "table": "billing_transactions",
+      "column": "txn_st_cd",
+      "confidence": 0.45
+    }
+  },
+  {
+    "event_id": "05422331-8eea-469b-b564-d1e545adf81d",
+    "seq": 6,
+    "run_id": "run-3d839b27-1fc5-49d2-9cca-5eb158748213",
+    "timestamp_utc": "2026-09-07T12:33:33.190700+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-d31f78bf-7b17-41aa-a778-61007071386e",
+      "table": "billing_transactions",
+      "column": "pmt_mthd_cd",
+      "confidence": 0.45
+    }
+  },
+  {
+    "event_id": "cd7dc0e0-764e-477b-90a8-1b9b4d86ca05",
+    "seq": 7,
+    "run_id": "run-3d839b27-1fc5-49d2-9cca-5eb158748213",
+    "timestamp_utc": "2026-09-07T12:33:51.027018+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-3c5a40d7-90da-4b48-98df-673fc4d21c81",
+      "table": "billing_transactions",
+      "column": "txn_dt",
+      "confidence": 0.5
+    }
+  },
+  {
+    "event_id": "dc6b95d5-9f0f-4740-82b8-8bceebd3a008",
+    "seq": 8,
+    "run_id": "run-3d839b27-1fc5-49d2-9cca-5eb158748213",
+    "timestamp_utc": "2026-09-07T12:33:58.311612+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-c41d6572-8d1d-4c43-a30d-66e8ef905317",
+      "table": "encounters",
+      "column": "pat_id",
+      "confidence": 0.55
+    }
+  },
+  {
+    "event_id": "c5128902-56da-4cd6-94ae-7a3e68e4cae6",
+    "seq": 9,
+    "run_id": "run-3d839b27-1fc5-49d2-9cca-5eb158748213",
+    "timestamp_utc": "2026-09-07T12:34:06.547684+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-99f27ec9-ea47-4da9-b6e6-02027af4c759",
+      "table": "encounters",
+      "column": "prov_id",
+      "confidence": 0.55
+    }
+  },
+  {
+    "event_id": "c128681f-e211-4f3a-861b-151c7f154a52",
+    "seq": 10,
+    "run_id": "run-3d839b27-1fc5-49d2-9cca-5eb158748213",
+    "timestamp_utc": "2026-09-07T12:34:28.872514+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-e0844545-a992-4447-80a8-068b8bc0459b",
+      "table": "encounters",
+      "column": "enc_dt",
+      "confidence": 0.45
+    }
+  },
+  {
+    "event_id": "15a75061-8ac0-4376-8f8f-e86e74913599",
+    "seq": 11,
+    "run_id": "run-3d839b27-1fc5-49d2-9cca-5eb158748213",
+    "timestamp_utc": "2026-09-07T12:34:45.877217+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-0a72152f-9863-4ea0-8d53-3bd666453cb3",
+      "table": "encounters",
+      "column": "enc_typ_cd",
+      "confidence": 0.4
+    }
+  },
+  {
+    "event_id": "0afc0151-8ee1-4047-a320-e9ea098b3fd8",
+    "seq": 12,
+    "run_id": "run-3d839b27-1fc5-49d2-9cca-5eb158748213",
+    "timestamp_utc": "2026-09-07T12:35:07.431021+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-0dd917f9-27a9-4566-8d2a-105d49648408",
+      "table": "encounters",
+      "column": "enc_amt",
+      "confidence": 0.4
+    }
+  },
+  {
+    "event_id": "61e8ff43-307a-45e1-be58-85bf0fae3bd6",
+    "seq": 13,
+    "run_id": "run-3d839b27-1fc5-49d2-9cca-5eb158748213",
+    "timestamp_utc": "2026-09-07T12:35:33.334135+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-e84974a9-30a8-4c09-844b-db31cce38118",
+      "table": "encounters",
+      "column": "enc_st",
+      "confidence": 0.4
+    }
+  },
+  {
+    "event_id": "a9671c8d-2a06-4d84-bf76-9b3ea5dc87dd",
+    "seq": 14,
+    "run_id": "run-3d839b27-1fc5-49d2-9cca-5eb158748213",
+    "timestamp_utc": "2026-09-07T12:35:59.016015+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-c0816010-95a2-4958-9db0-f52432d737d2",
+      "table": "insurance_plans",
+      "column": "plan_nm",
+      "confidence": 0.5
+    }
+  },
+  {
+    "event_id": "df01b5c7-bfa0-4a8f-bb83-82ce4b5837d2",
+    "seq": 15,
+    "run_id": "run-3d839b27-1fc5-49d2-9cca-5eb158748213",
+    "timestamp_utc": "2026-09-07T12:36:18.632937+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-26bab2b3-976a-4313-891d-9ff8d5421e8d",
+      "table": "insurance_plans",
+      "column": "plan_typ_cd",
+      "confidence": 0.4
+    }
+  },
+  {
+    "event_id": "d2e56404-a03f-4dcd-9033-67ab9bcefc0f",
+    "seq": 16,
+    "run_id": "run-3d839b27-1fc5-49d2-9cca-5eb158748213",
+    "timestamp_utc": "2026-09-07T12:36:47.006102+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-4f61e92b-6ca2-4e8d-8770-9872129535ca",
+      "table": "insurance_plans",
+      "column": "plan_active",
+      "confidence": 0.4
+    }
+  },
+  {
+    "event_id": "796c3f77-5696-43d0-845a-24a16bfd9b43",
+    "seq": 17,
+    "run_id": "run-3d839b27-1fc5-49d2-9cca-5eb158748213",
+    "timestamp_utc": "2026-09-07T12:38:16.147274+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-5219c6ff-de40-4399-b77d-7a8233cc5375",
+      "table": "patient_records",
+      "column": "pat_fname",
+      "confidence": 0.55
+    }
+  },
+  {
+    "event_id": "800c332f-46b7-4d6d-b7cb-d05b5ee58d0a",
+    "seq": 18,
+    "run_id": "run-3d839b27-1fc5-49d2-9cca-5eb158748213",
+    "timestamp_utc": "2026-09-07T12:38:38.880697+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-3f388087-47bf-4121-94e4-99559175fc9d",
+      "table": "patient_records",
+      "column": "pat_lname",
+      "confidence": 0.55
+    }
+  },
+  {
+    "event_id": "9eb8c30b-554e-4a7c-9d7e-278a16f5ff04",
+    "seq": 19,
+    "run_id": "run-3d839b27-1fc5-49d2-9cca-5eb158748213",
+    "timestamp_utc": "2026-09-07T12:39:07.095325+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-ffc574a1-d32f-459d-a059-2c16b35008a5",
+      "table": "patient_records",
+      "column": "dob",
+      "confidence": 0.5
+    }
+  },
+  {
+    "event_id": "53e6c204-ab65-4561-8759-6d1627c54027",
+    "seq": 20,
+    "run_id": "run-3d839b27-1fc5-49d2-9cca-5eb158748213",
+    "timestamp_utc": "2026-09-07T12:39:12.868335+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-09534fe9-eaac-4451-95b5-983b1bb357e4",
+      "table": "patient_records",
+      "column": "ssn_enc",
+      "confidence": 0.4
+    }
+  },
+  {
+    "event_id": "1bc272cc-5fc7-409e-b2af-69e5d19ffa12",
+    "seq": 21,
+    "run_id": "run-3d839b27-1fc5-49d2-9cca-5eb158748213",
+    "timestamp_utc": "2026-09-07T12:39:20.691574+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-e45ed152-4ef6-47ea-8385-2f51354c9308",
+      "table": "patient_records",
+      "column": "pat_st_cd",
+      "confidence": 0.45
+    }
+  },
+  {
+    "event_id": "fc24760b-8a38-4087-9e78-92ff7c282e74",
+    "seq": 22,
+    "run_id": "run-3d839b27-1fc5-49d2-9cca-5eb158748213",
+    "timestamp_utc": "2026-09-07T12:39:41.269639+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-d660aaf8-704f-4583-b7fb-464a47cdbb88",
+      "table": "patient_records",
+      "column": "plan_id",
+      "confidence": 0.55
+    }
+  },
+  {
+    "event_id": "e8a1dd46-4e3f-486a-a8e3-e422e97fc748",
+    "seq": 23,
+    "run_id": "unknown-run",
+    "timestamp_utc": "2026-09-07T12:42:11.153543+00:00",
+    "event_type": "schema_profiled",
+    "payload": {
+      "tables_profiled": [
+        "billing_transactions",
+        "encounters",
+        "insurance_plans",
+        "patient_records",
+        "providers"
+      ],
+      "total_row_count": 0,
+      "output_path": "artifacts/schema_profile.json"
+    }
+  },
+  {
+    "event_id": "90c61099-ccbe-4497-82da-68bee68efb7c",
+    "seq": 24,
+    "run_id": "unknown-run",
+    "timestamp_utc": "2026-09-07T16:51:15.141678+00:00",
+    "event_type": "schema_profiled",
+    "payload": {
+      "tables_profiled": [
+        "billing_transactions",
+        "encounters",
+        "insurance_plans",
+        "patient_records",
+        "providers"
+      ],
+      "total_row_count": 76045,
+      "output_path": "artifacts/schema_profile.json"
+    }
+  },
+  {
+    "event_id": "b7a7f2e5-a82c-441e-a38d-2377c4ea52b5",
+    "seq": 25,
+    "run_id": "run-775f58de-b5ca-49aa-b5b5-74fc8f1bac34",
+    "timestamp_utc": "2026-09-07T16:51:27.734137+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-82076fc0-e0fe-44ac-a15a-b69113e7aa9e",
+      "table": "billing_transactions",
+      "column": "enc_id",
+      "confidence": 0.85
+    }
+  },
+  {
+    "event_id": "b8dae88d-b835-4baf-b12e-c0804cd16a01",
+    "seq": 26,
+    "run_id": "run-775f58de-b5ca-49aa-b5b5-74fc8f1bac34",
+    "timestamp_utc": "2026-09-07T16:51:33.828546+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-da04b56a-7d2d-4215-b483-461cb01c1004",
+      "table": "billing_transactions",
+      "column": "txn_amt",
+      "confidence": 0.98
+    }
+  },
+  {
+    "event_id": "741a4f08-001b-4a3f-addc-2a53a9dcaf0f",
+    "seq": 27,
+    "run_id": "run-775f58de-b5ca-49aa-b5b5-74fc8f1bac34",
+    "timestamp_utc": "2026-09-07T16:51:40.023179+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-206de8e9-7221-487e-a98f-ebcaa922fe80",
+      "table": "billing_transactions",
+      "column": "txn_st_cd",
+      "confidence": 0.55
+    }
+  },
+  {
+    "event_id": "45f5f249-c3e8-4845-9587-750d0cb46223",
+    "seq": 28,
+    "run_id": "run-775f58de-b5ca-49aa-b5b5-74fc8f1bac34",
+    "timestamp_utc": "2026-09-07T16:51:46.052935+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-96e771c4-d6cd-4157-a3df-205339153075",
+      "table": "billing_transactions",
+      "column": "pmt_mthd_cd",
+      "confidence": 0.9
+    }
+  },
+  {
+    "event_id": "1aa5ce98-ecc9-4abf-a67a-95391c5bccfe",
+    "seq": 29,
+    "run_id": "run-775f58de-b5ca-49aa-b5b5-74fc8f1bac34",
+    "timestamp_utc": "2026-09-07T16:51:53.616146+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-8e674c87-e5ae-478e-b617-a0e8acc95f23",
+      "table": "billing_transactions",
+      "column": "txn_dt",
+      "confidence": 0.98
+    }
+  },
+  {
+    "event_id": "4b1e257f-1d1e-4247-96d5-1674d1ab1ccb",
+    "seq": 30,
+    "run_id": "run-775f58de-b5ca-49aa-b5b5-74fc8f1bac34",
+    "timestamp_utc": "2026-09-07T16:51:58.361002+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-ba6e0519-eb88-481b-ac37-00f965971359",
+      "table": "encounters",
+      "column": "pat_id",
+      "confidence": 0.98
+    }
+  },
+  {
+    "event_id": "4942d0d6-fcf8-4592-8955-ebff4ef8adfd",
+    "seq": 31,
+    "run_id": "unknown-run",
+    "timestamp_utc": "2026-09-07T16:53:52.255144+00:00",
+    "event_type": "schema_profiled",
+    "payload": {
+      "tables_profiled": [
+        "billing_transactions",
+        "encounters",
+        "insurance_plans",
+        "patient_records",
+        "providers"
+      ],
+      "total_row_count": 76045,
+      "output_path": "artifacts/schema_profile.json"
+    }
+  },
+  {
+    "event_id": "2e098fa6-ccad-464c-9bfe-fda2c7974fcc",
+    "seq": 32,
+    "run_id": "run-51bb698d-e7a0-4fca-b9a6-4efce3a78f95",
+    "timestamp_utc": "2026-09-07T16:53:55.397623+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-c5f04210-70b5-4d33-acee-cd9c02ac9544",
+      "table": "billing_transactions",
+      "column": "enc_id",
+      "confidence": 0.85
+    }
+  },
+  {
+    "event_id": "e11de2ac-3901-492b-a28d-51d58130f25b",
+    "seq": 33,
+    "run_id": "run-51bb698d-e7a0-4fca-b9a6-4efce3a78f95",
+    "timestamp_utc": "2026-09-07T16:53:56.825993+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-f7615871-706b-4143-98e0-8114ebf3d482",
+      "table": "billing_transactions",
+      "column": "txn_amt",
+      "confidence": 0.99
+    }
+  },
+  {
+    "event_id": "d1cc70ff-92a6-48a3-bf1f-1cb8fe01310c",
+    "seq": 34,
+    "run_id": "run-51bb698d-e7a0-4fca-b9a6-4efce3a78f95",
+    "timestamp_utc": "2026-09-07T16:53:58.462196+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-a93df8e2-c01a-4334-ae38-9ad3b962fd97",
+      "table": "billing_transactions",
+      "column": "txn_st_cd",
+      "confidence": 0.3
+    }
+  },
+  {
+    "event_id": "4b7d2cfc-1d7e-4b5f-a513-ec93be004ac5",
+    "seq": 35,
+    "run_id": "run-51bb698d-e7a0-4fca-b9a6-4efce3a78f95",
+    "timestamp_utc": "2026-09-07T16:54:00.196385+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-618f0b5a-5aee-4334-a9e6-9f878e1571d4",
+      "table": "billing_transactions",
+      "column": "pmt_mthd_cd",
+      "confidence": 0.95
+    }
+  },
+  {
+    "event_id": "46e04377-cf3e-4f04-9a40-a85f85d7074e",
+    "seq": 36,
+    "run_id": "run-51bb698d-e7a0-4fca-b9a6-4efce3a78f95",
+    "timestamp_utc": "2026-09-07T16:54:01.530562+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-832b2e6d-0d3d-402f-a842-88cfa9da7669",
+      "table": "billing_transactions",
+      "column": "txn_dt",
+      "confidence": 1.0
+    }
+  },
+  {
+    "event_id": "2b775e18-b618-4806-a8ae-f5d7a7fb2233",
+    "seq": 37,
+    "run_id": "run-51bb698d-e7a0-4fca-b9a6-4efce3a78f95",
+    "timestamp_utc": "2026-09-07T16:54:02.972637+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-3b0b736c-ea96-4d0c-b5c5-b13af4f547af",
+      "table": "encounters",
+      "column": "pat_id",
+      "confidence": 0.99
+    }
+  },
+  {
+    "event_id": "8d1e197e-1d04-4e81-820c-31c57d750bbc",
+    "seq": 38,
+    "run_id": "run-51bb698d-e7a0-4fca-b9a6-4efce3a78f95",
+    "timestamp_utc": "2026-09-07T16:54:04.516160+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-c62a19b3-3098-4e8d-980a-a6f75bc582a7",
+      "table": "encounters",
+      "column": "prov_id",
+      "confidence": 0.95
+    }
+  },
+  {
+    "event_id": "213bf801-69f6-4a10-b801-3594226c07d4",
+    "seq": 39,
+    "run_id": "run-51bb698d-e7a0-4fca-b9a6-4efce3a78f95",
+    "timestamp_utc": "2026-09-07T16:54:05.935565+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-d9a3d423-ee6f-405f-9f6d-71cd6c1e4a77",
+      "table": "encounters",
+      "column": "enc_dt",
+      "confidence": 0.99
+    }
+  },
+  {
+    "event_id": "e8a8f56f-ee06-45a0-9173-4dc52ce1162f",
+    "seq": 40,
+    "run_id": "run-51bb698d-e7a0-4fca-b9a6-4efce3a78f95",
+    "timestamp_utc": "2026-09-07T16:54:07.784038+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-3e51cca1-3c6e-42ad-891b-3b10b6b5a23c",
+      "table": "encounters",
+      "column": "enc_typ_cd",
+      "confidence": 0.85
+    }
+  },
+  {
+    "event_id": "b5e5370c-aa86-49a4-a713-b6f957cff312",
+    "seq": 41,
+    "run_id": "run-51bb698d-e7a0-4fca-b9a6-4efce3a78f95",
+    "timestamp_utc": "2026-09-07T16:54:09.212783+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-d7418de0-b692-4d7f-8d1c-7427508d0ec1",
+      "table": "encounters",
+      "column": "enc_amt",
+      "confidence": 0.95
+    }
+  },
+  {
+    "event_id": "4f4525fa-63fd-4175-b815-37235c5f15ac",
+    "seq": 42,
+    "run_id": "run-51bb698d-e7a0-4fca-b9a6-4efce3a78f95",
+    "timestamp_utc": "2026-09-07T16:54:11.055010+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-4a5d6ff2-4729-4b5b-bb33-4e0d9ec35549",
+      "table": "encounters",
+      "column": "enc_st",
+      "confidence": 0.3
+    }
+  },
+  {
+    "event_id": "bb4e1803-a3a3-43c7-81aa-a74e6066da7b",
+    "seq": 43,
+    "run_id": "run-51bb698d-e7a0-4fca-b9a6-4efce3a78f95",
+    "timestamp_utc": "2026-09-07T16:54:12.309576+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-fca71654-e2a4-4e97-abda-428f28bc5c03",
+      "table": "insurance_plans",
+      "column": "plan_nm",
+      "confidence": 1.0
+    }
+  },
+  {
+    "event_id": "55550d3b-5c3a-45d1-942f-acdd3c4d4b33",
+    "seq": 44,
+    "run_id": "run-51bb698d-e7a0-4fca-b9a6-4efce3a78f95",
+    "timestamp_utc": "2026-09-07T16:54:14.053512+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-82326853-cc88-46fb-bf5e-b9950ae7464e",
+      "table": "insurance_plans",
+      "column": "plan_typ_cd",
+      "confidence": 0.85
+    }
+  },
+  {
+    "event_id": "4237525d-37b4-439b-9554-1bd4f6602dd8",
+    "seq": 45,
+    "run_id": "run-51bb698d-e7a0-4fca-b9a6-4efce3a78f95",
+    "timestamp_utc": "2026-09-07T16:54:15.662261+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-54d5db71-acf3-4040-8aee-853d9e09cdf6",
+      "table": "insurance_plans",
+      "column": "plan_active",
+      "confidence": 0.3
+    }
+  },
+  {
+    "event_id": "c9a58f2e-9902-49c1-9b41-7e0ca679dc3e",
+    "seq": 46,
+    "run_id": "run-51bb698d-e7a0-4fca-b9a6-4efce3a78f95",
+    "timestamp_utc": "2026-09-07T16:54:17.318085+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-52f444f0-3aa4-4302-aed1-ec79c9204f87",
+      "table": "patient_records",
+      "column": "pat_fname",
+      "confidence": 1.0
+    }
+  },
+  {
+    "event_id": "42fe6078-b858-4adf-9995-ff9d654e7b7c",
+    "seq": 47,
+    "run_id": "run-51bb698d-e7a0-4fca-b9a6-4efce3a78f95",
+    "timestamp_utc": "2026-09-07T16:54:19.456104+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-502bbc37-b635-4b92-ae01-803d510e740b",
+      "table": "patient_records",
+      "column": "pat_lname",
+      "confidence": 1.0
+    }
+  },
+  {
+    "event_id": "a7bbff22-e8f0-4573-97a3-7b04527f3b79",
+    "seq": 48,
+    "run_id": "unknown-run",
+    "timestamp_utc": "2026-09-08T05:37:14.895719+00:00",
+    "event_type": "schema_profiled",
+    "payload": {
+      "tables_profiled": [
+        "billing_transactions",
+        "encounters",
+        "insurance_plans",
+        "patient_records",
+        "providers"
+      ],
+      "total_row_count": 76045,
+      "output_path": "artifacts/schema_profile.json"
+    }
+  },
+  {
+    "event_id": "496c037b-ae10-40bd-b962-2d641295de4b",
+    "seq": 49,
+    "run_id": "unknown-run",
+    "timestamp_utc": "2026-09-08T05:40:05.907526+00:00",
+    "event_type": "schema_profiled",
+    "payload": {
+      "tables_profiled": [
+        "billing_transactions",
+        "encounters",
+        "insurance_plans",
+        "patient_records",
+        "providers"
+      ],
+      "total_row_count": 76045,
+      "output_path": "artifacts/schema_profile.json"
+    }
+  },
+  {
+    "event_id": "fa4c2b60-f319-4365-bc3a-8609978e80f9",
+    "seq": 50,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:40:09.719128+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-e6c48d86-9a8b-479f-b234-82138635fcf9",
+      "table": "billing_transactions",
+      "column": "enc_id",
+      "confidence": 0.85
+    }
+  },
+  {
+    "event_id": "33ebc1b9-d10b-4669-a205-e9a9f89efacc",
+    "seq": 51,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:40:15.572521+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-73af8671-efd2-497f-82ec-db294b857051",
+      "table": "billing_transactions",
+      "column": "txn_amt",
+      "confidence": 1.0
+    }
+  },
+  {
+    "event_id": "feb67468-a221-4e94-9516-be378e5fed2e",
+    "seq": 52,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:40:21.931344+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-0a96bed5-8c78-4275-a20d-c62867661826",
+      "table": "billing_transactions",
+      "column": "txn_st_cd",
+      "confidence": 0.3
+    }
+  },
+  {
+    "event_id": "93c4dea9-d13c-445a-83d0-a53f2b474ee7",
+    "seq": 53,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:40:28.030875+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-e1f97c0b-ec37-4a1e-8493-e3bd9e352f13",
+      "table": "billing_transactions",
+      "column": "pmt_mthd_cd",
+      "confidence": 0.95
+    }
+  },
+  {
+    "event_id": "d7db02cd-3a9e-4f55-a45c-22ce717b31b2",
+    "seq": 54,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:40:33.875616+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-45cfadc1-4a68-4f80-a607-5fe428048935",
+      "table": "billing_transactions",
+      "column": "txn_dt",
+      "confidence": 1.0
+    }
+  },
+  {
+    "event_id": "8e93104f-18f4-4c1d-a015-7b5b370ad384",
+    "seq": 55,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:40:39.956215+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-cbe1dc55-5f95-4ac3-b3c6-9c3b356fe7f9",
+      "table": "encounters",
+      "column": "pat_id",
+      "confidence": 1.0
+    }
+  },
+  {
+    "event_id": "aa3c4fcd-bc77-4779-bf1a-a3f678dca1d1",
+    "seq": 56,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:40:45.906035+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-929f28ef-4fc1-4e93-ab56-7fb06e4fdbb0",
+      "table": "encounters",
+      "column": "prov_id",
+      "confidence": 0.95
+    }
+  },
+  {
+    "event_id": "91e3f061-42e8-4d9c-beb0-12e11d356569",
+    "seq": 57,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:40:51.880616+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-511e1960-9d99-4732-8b91-0ebdbfc7b828",
+      "table": "encounters",
+      "column": "enc_dt",
+      "confidence": 0.99
+    }
+  },
+  {
+    "event_id": "613ce2bf-8127-4ec0-8d7e-7aa25c5e7afa",
+    "seq": 58,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:40:58.138963+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-59ba04da-4bcd-4ff7-8c8f-14e26112e6dc",
+      "table": "encounters",
+      "column": "enc_typ_cd",
+      "confidence": 0.85
+    }
+  },
+  {
+    "event_id": "8ba6464b-8926-4693-b3bc-424b0997a0d7",
+    "seq": 59,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:41:04.189095+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-90291c59-9fc5-44a6-8cea-41fc7d1ee7c0",
+      "table": "encounters",
+      "column": "enc_amt",
+      "confidence": 0.95
+    }
+  },
+  {
+    "event_id": "48b37f54-0236-4765-903c-b92051c18a8f",
+    "seq": 60,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:41:10.588392+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-5a6445de-b58e-43a2-9d03-ccacd359ddb1",
+      "table": "encounters",
+      "column": "enc_st",
+      "confidence": 0.3
+    }
+  },
+  {
+    "event_id": "8825ccd7-b03b-431a-b136-2591e289afb4",
+    "seq": 61,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:41:16.451641+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-4736cda6-9a1d-489b-bce4-bff87f7465c2",
+      "table": "insurance_plans",
+      "column": "plan_nm",
+      "confidence": 1.0
+    }
+  },
+  {
+    "event_id": "d2aa3c04-2032-4daa-b633-4af5046c87c8",
+    "seq": 62,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:41:22.599497+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-c1fa3bef-a01c-4f6d-ae60-118f8453c978",
+      "table": "insurance_plans",
+      "column": "plan_typ_cd",
+      "confidence": 0.85
+    }
+  },
+  {
+    "event_id": "9b2bffc4-c70a-4fd5-b962-06c4930f1713",
+    "seq": 63,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:41:29.146402+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-b93cb1bc-8350-46bd-b49c-1e7ea5290be2",
+      "table": "insurance_plans",
+      "column": "plan_active",
+      "confidence": 0.95
+    }
+  },
+  {
+    "event_id": "d5e6e13e-38aa-4d12-8878-2f827cb3540f",
+    "seq": 64,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:41:34.983963+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-3ab54040-fcdc-4e63-8ba8-3bca58d2d9c9",
+      "table": "patient_records",
+      "column": "pat_fname",
+      "confidence": 1.0
+    }
+  },
+  {
+    "event_id": "8e174444-468d-4278-928f-e192d896413b",
+    "seq": 65,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:41:40.855121+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-624dd348-280e-48ff-ba31-038bbd503145",
+      "table": "patient_records",
+      "column": "pat_lname",
+      "confidence": 1.0
+    }
+  },
+  {
+    "event_id": "b00675ed-d29a-4808-85d6-ca9cae21b9ac",
+    "seq": 66,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:41:47.023415+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-8edce2b8-8155-4f37-8062-6344fd80d752",
+      "table": "patient_records",
+      "column": "dob",
+      "confidence": 1.0
+    }
+  },
+  {
+    "event_id": "fbdd034d-5dad-4c46-a5a3-01a95dcbc556",
+    "seq": 67,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:41:53.289882+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-64544937-dfee-4e9f-bb01-e901930e6d04",
+      "table": "patient_records",
+      "column": "ssn_enc",
+      "confidence": 0.95
+    }
+  },
+  {
+    "event_id": "3c6219b9-b675-4a49-a7b6-7c613126c907",
+    "seq": 68,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:42:00.052129+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-5bbc0028-17bc-413b-a909-07271f47e890",
+      "table": "patient_records",
+      "column": "pat_st_cd",
+      "confidence": 0.3
+    }
+  },
+  {
+    "event_id": "681b82a4-3e02-437a-9f4e-6c8aa5976a41",
+    "seq": 69,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:42:06.107775+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-2c1e2ef3-fe54-4c4a-8566-c532e97e2760",
+      "table": "patient_records",
+      "column": "plan_id",
+      "confidence": 0.95
+    }
+  },
+  {
+    "event_id": "4ddddae4-9801-4795-8ee2-06267291e6c2",
+    "seq": 70,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:42:12.345678+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-992d38ca-0224-422f-8030-b82902f71578",
+      "table": "patient_records",
+      "column": "created_ts",
+      "confidence": 0.99
+    }
+  },
+  {
+    "event_id": "bd75f336-cf56-4656-a01a-8c19b4e9c828",
+    "seq": 71,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:42:18.073359+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-f9044335-6c7d-418e-a9e0-99bd0190a225",
+      "table": "providers",
+      "column": "prov_nm",
+      "confidence": 1.0
+    }
+  },
+  {
+    "event_id": "db9d2fdb-9af5-4953-bad1-1352db977e04",
+    "seq": 72,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:42:24.238304+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-401b2ced-0a25-48ce-8e38-b028833742b4",
+      "table": "providers",
+      "column": "prov_spec_cd",
+      "confidence": 0.95
+    }
+  },
+  {
+    "event_id": "eae67dad-dfe1-467c-8b2b-e03c52904388",
+    "seq": 73,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:42:30.197189+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-cfdc3308-9a8a-4d47-bd85-569408eacb95",
+      "table": "providers",
+      "column": "prov_active_flg",
+      "confidence": 1.0
+    }
+  },
+  {
+    "event_id": "24854028-a103-4968-a929-8c737fe8374a",
+    "seq": 74,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:42:36.016093+00:00",
+    "event_type": "ai_mapping_generated",
+    "payload": {
+      "prompt_id": "prompt-2c89c138-e545-473b-8458-aa995342d1da",
+      "table": "providers",
+      "column": "hire_dt",
+      "confidence": 1.0
+    }
+  },
+  {
+    "event_id": "a067e2ff-bd76-47f6-8664-fd96c9db738e",
+    "seq": 75,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T05:42:40.531899+00:00",
+    "event_type": "pipeline_error",
+    "payload": {
+      "reason": "awaiting_human_review",
+      "pending_count": 3
+    }
+  },
+  {
+    "event_id": "ba9dbb1c-450b-44c5-86a8-0233f7a1d3ba",
+    "seq": 76,
+    "run_id": "manual-review",
+    "timestamp_utc": "2026-09-08T07:02:30.534213+00:00",
+    "event_type": "human_review_decision",
+    "payload": {
+      "table": "billing_transactions",
+      "column": "txn_st_cd",
+      "prompt_id": "prompt-0a96bed5-8c78-4275-a20d-c62867661826",
+      "decision": "approve",
+      "override_note": "testing for pipeline error",
+      "confidence": 0.3
+    }
+  },
+  {
+    "event_id": "4da5d8ca-d340-4b9d-9512-900de58285a9",
+    "seq": 77,
+    "run_id": "manual-review",
+    "timestamp_utc": "2026-09-08T07:02:41.019115+00:00",
+    "event_type": "human_review_decision",
+    "payload": {
+      "table": "encounters",
+      "column": "enc_st",
+      "prompt_id": "prompt-5a6445de-b58e-43a2-9d03-ccacd359ddb1",
+      "decision": "approve",
+      "override_note": "teasting for pipeline error",
+      "confidence": 0.3
+    }
+  },
+  {
+    "event_id": "87f1973d-a8ab-44ff-976c-7bd581430d5e",
+    "seq": 78,
+    "run_id": "manual-review",
+    "timestamp_utc": "2026-09-08T07:02:50.671844+00:00",
+    "event_type": "human_review_decision",
+    "payload": {
+      "table": "patient_records",
+      "column": "pat_st_cd",
+      "prompt_id": "prompt-5bbc0028-17bc-413b-a909-07271f47e890",
+      "decision": "approve",
+      "override_note": "testing for pipeline error",
+      "confidence": 0.3
+    }
+  },
+  {
+    "event_id": "924a7186-4add-4b04-ad46-ed1891961a59",
+    "seq": 79,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T07:04:06.622846+00:00",
+    "event_type": "rule_generated",
+    "payload": {
+      "rule_count": 30,
+      "output_path": "artifacts/transformation_rules.json"
+    }
+  },
+  {
+    "event_id": "15a6193f-6ecd-47b2-b828-045adc8e5fd3",
+    "seq": 80,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T08:49:05.577142+00:00",
+    "event_type": "migration_executed",
+    "payload": {
+      "table": "billing_transactions",
+      "target_table": "stg_billing_transactions",
+      "source_row_count": 34000,
+      "loaded_row_count": 34000,
+      "columns_migrated": [
+        "txn_id",
+        "encounter_id",
+        "transaction_amount",
+        "transaction_status_code",
+        "payment_method_code",
+        "transaction_timestamp"
+      ]
+    }
+  },
+  {
+    "event_id": "25bf542f-0656-4d5d-b681-3f4efe739a5f",
+    "seq": 81,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T08:49:43.787226+00:00",
+    "event_type": "migration_executed",
+    "payload": {
+      "table": "encounters",
+      "target_table": "stg_encounters",
+      "source_row_count": 30000,
+      "loaded_row_count": 30000,
+      "columns_migrated": [
+        "enc_id",
+        "patient_id",
+        "provider_id",
+        "encounter_timestamp",
+        "encounter_type_code",
+        "encounter_amount",
+        "encounter_status_code"
+      ]
+    }
+  },
+  {
+    "event_id": "0b3d4e3a-ec8c-4f6a-9de9-ceb7b760da60",
+    "seq": 82,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T08:49:45.844538+00:00",
+    "event_type": "migration_executed",
+    "payload": {
+      "table": "insurance_plans",
+      "target_table": "stg_insurance_plans",
+      "source_row_count": 5,
+      "loaded_row_count": 5,
+      "columns_migrated": [
+        "plan_id",
+        "plan_name",
+        "plan_type_code",
+        "is_plan_active"
+      ]
+    }
+  },
+  {
+    "event_id": "777e7fd3-35ac-4b95-8eaf-ceee3bb4b8bc",
+    "seq": 83,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T08:49:54.946424+00:00",
+    "event_type": "migration_executed",
+    "payload": {
+      "table": "patient_records",
+      "target_table": "stg_patient_records",
+      "source_row_count": 12000,
+      "loaded_row_count": 12000,
+      "columns_migrated": [
+        "pat_id",
+        "first_name",
+        "last_name",
+        "date_of_birth",
+        "ssn_hash",
+        "patient_status_code",
+        "insurance_plan_id",
+        "created_at"
+      ]
+    }
+  },
+  {
+    "event_id": "b526c2e7-96de-405a-8022-71558752bffc",
+    "seq": 84,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T08:49:57.099426+00:00",
+    "event_type": "migration_executed",
+    "payload": {
+      "table": "providers",
+      "target_table": "stg_providers",
+      "source_row_count": 40,
+      "loaded_row_count": 40,
+      "columns_migrated": [
+        "prov_id",
+        "provider_name",
+        "provider_specialty_code",
+        "is_active",
+        "hire_date"
+      ]
+    }
+  },
+  {
+    "event_id": "9bd0acae-1b89-491e-b854-08b3789466ce",
+    "seq": 85,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T08:50:09.713362+00:00",
+    "event_type": "validation_result",
+    "payload": {
+      "checkpoint": "03_post_load_billing_transactions",
+      "success": true,
+      "output_path": "D:\\AI Native FDE\\legacy-migration\\legacy-migration\\validation\\great_expectations\\results\\03_post_load_billing_transactions.json"
+    }
+  },
+  {
+    "event_id": "dece17c7-ac92-4850-a5a7-f57bfd9cf645",
+    "seq": 86,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T08:50:11.092633+00:00",
+    "event_type": "validation_result",
+    "payload": {
+      "checkpoint": "03_post_load_encounters",
+      "success": true,
+      "output_path": "D:\\AI Native FDE\\legacy-migration\\legacy-migration\\validation\\great_expectations\\results\\03_post_load_encounters.json"
+    }
+  },
+  {
+    "event_id": "5903b74f-80af-4830-bd2c-5b61cec88d0b",
+    "seq": 87,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T08:50:11.558945+00:00",
+    "event_type": "validation_result",
+    "payload": {
+      "checkpoint": "03_post_load_insurance_plans",
+      "success": true,
+      "output_path": "D:\\AI Native FDE\\legacy-migration\\legacy-migration\\validation\\great_expectations\\results\\03_post_load_insurance_plans.json"
+    }
+  },
+  {
+    "event_id": "6e5c41ba-caae-4212-be97-f059a63a5799",
+    "seq": 88,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T08:50:12.704735+00:00",
+    "event_type": "validation_result",
+    "payload": {
+      "checkpoint": "03_post_load_patient_records",
+      "success": true,
+      "output_path": "D:\\AI Native FDE\\legacy-migration\\legacy-migration\\validation\\great_expectations\\results\\03_post_load_patient_records.json"
+    }
+  },
+  {
+    "event_id": "6edf09ec-3440-475b-894c-23d1fd8ab423",
+    "seq": 89,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T08:50:13.206609+00:00",
+    "event_type": "validation_result",
+    "payload": {
+      "checkpoint": "03_post_load_providers",
+      "success": true,
+      "output_path": "D:\\AI Native FDE\\legacy-migration\\legacy-migration\\validation\\great_expectations\\results\\03_post_load_providers.json"
+    }
+  },
+  {
+    "event_id": "1622a5e2-bf1e-4649-931d-19b52dd1aac6",
+    "seq": 90,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T08:50:16.140850+00:00",
+    "event_type": "validation_result",
+    "payload": {
+      "checkpoint": "reconciliation_report",
+      "report": {
+        "tables": {
+          "billing_transactions": {
+            "source_row_count": 34000,
+            "target_row_count": 34000,
+            "row_count_match": true,
+            "target_table": "stg_billing_transactions"
+          },
+          "encounters": {
+            "source_row_count": 30000,
+            "target_row_count": 30000,
+            "row_count_match": true,
+            "target_table": "stg_encounters"
+          },
+          "insurance_plans": {
+            "source_row_count": 5,
+            "target_row_count": 5,
+            "row_count_match": true,
+            "target_table": "stg_insurance_plans"
+          },
+          "patient_records": {
+            "source_row_count": 12000,
+            "target_row_count": 12000,
+            "row_count_match": true,
+            "target_table": "stg_patient_records"
+          },
+          "providers": {
+            "source_row_count": 40,
+            "target_row_count": 40,
+            "row_count_match": true,
+            "target_table": "stg_providers"
+          }
+        }
+      }
+    }
+  },
+  {
+    "event_id": "977318af-a269-4ae6-8d6c-27368caef46f",
+    "seq": 91,
+    "run_id": "run-147fb3d0-a938-49f3-a6f4-50a178fcd2ad",
+    "timestamp_utc": "2026-09-08T08:50:25.236348+00:00",
+    "event_type": "doc_generated",
+    "payload": {
+      "rule_count": 30,
+      "output_path": "artifacts/target_data_dictionary.md"
+    }
+  }
+]

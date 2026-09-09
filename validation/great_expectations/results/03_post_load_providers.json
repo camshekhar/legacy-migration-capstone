@@ -1,0 +1,82 @@
+{
+  "success": true,
+  "results": [
+    {
+      "success": true,
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "prov_id",
+          "result_format": "SUMMARY"
+        },
+        "meta": {}
+      },
+      "result": {
+        "element_count": 40,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "partial_unexpected_list": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_message": null,
+        "exception_traceback": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_unique",
+        "kwargs": {
+          "column": "prov_id",
+          "result_format": "SUMMARY"
+        },
+        "meta": {}
+      },
+      "result": {
+        "element_count": 40,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_message": null,
+        "exception_traceback": null
+      }
+    }
+  ],
+  "evaluation_parameters": {},
+  "statistics": {
+    "evaluated_expectations": 2,
+    "successful_expectations": 2,
+    "unsuccessful_expectations": 0,
+    "success_percent": 100.0
+  },
+  "meta": {
+    "great_expectations_version": "0.18.19",
+    "expectation_suite_name": "default",
+    "run_id": {
+      "run_name": null,
+      "run_time": "2026-09-08T14:20:13.160788+05:30"
+    },
+    "batch_kwargs": {
+      "ge_batch_id": "4e285950-ab62-11f1-aef2-b047e94c2c86"
+    },
+    "batch_markers": {},
+    "batch_parameters": {},
+    "validation_time": "20260908T085013.160788Z",
+    "expectation_suite_meta": {
+      "great_expectations_version": "0.18.19"
+    }
+  }
+}
