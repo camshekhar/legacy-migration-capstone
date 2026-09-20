@@ -32,7 +32,7 @@ as a LangGraph state graph in `workflow/langgraph_orchestrator.py`.
                  └─────────┬──────────┘
                             ▼
                  ┌────────────────────┐
-                 │  ai_mapper          │  agents/ai_mapper.py (Claude + LangChain)
+                 │  ai_mapper          │  agents/ai_mapper.py (Gemini + LangChain)
                  │  per-column mapping │  → artifacts/mappings.json
                  │  + confidence score │  (traced to LangFuse, prompt_id logged)
                  └─────────┬──────────┘
@@ -80,7 +80,7 @@ Great Expectations runs at three checkpoints as required:
 ## Setup Instructions
 
 ### Prerequisites
-- Python 3.10+
+- Python 3.11 (recommended — 3.13+ currently lacks prebuilt wheels for numpy/pandas and will fail to install without a C compiler)
 - Docker Desktop (for the local MySQL source DB)
 - A Google AI Studio API key (free, no card — aistudio.google.com)
 - A free Snowflake trial account (https://signup.snowflake.com)
@@ -290,10 +290,18 @@ legacy-migration/
 │   └── cli_review.py
 ├── validation/
 │   ├── validator.py
+│   ├── generate_dbt_models.py       # generates dbt models from approved rules
 │   └── dbt_models/
+│       └── models/marts/            # auto-generated: rename + value-transform SQL
 ├── audit/
 │   ├── audit_logger.py
-│   └── migration_audit_log.json   (generated at runtime)
+│   └── migration_audit_log.json     (generated at runtime)
+├── artifacts/                        (generated at runtime)
+│   ├── schema_profile.json
+│   ├── mappings.json
+│   ├── transformation_rules.json
+│   ├── reconciliation_report.json
+│   └── target_data_dictionary.md
 └── docs/
-    └── target_data_dictionary.md  (generated at runtime)
+    └── target_data_dictionary.md    (generated at runtime)
 ```
