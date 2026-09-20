@@ -1,0 +1,34 @@
+version: 2
+
+# The marts models themselves are auto-generated (see
+# validation/generate_dbt_models.py) since their column names depend on
+# what ai_mapper named things in your specific run. These tests only cover
+# what's guaranteed stable across any run: primary keys, which are always
+# mapped 1:1 by convention (see agents/ai_mapper.py).
+#
+# After running `python validation/generate_dbt_models.py`, open one of the
+# generated transformed_<table>.sql files or artifacts/target_data_dictionary.md
+# to see your actual column names, then add accepted_values / not_null tests
+# below for your specific status-code columns (e.g. transaction_status_code).
+
+models:
+  - name: transformed_insurance_plans
+    columns:
+      - name: plan_id
+        tests: [unique, not_null]
+  - name: transformed_providers
+    columns:
+      - name: prov_id
+        tests: [unique, not_null]
+  - name: transformed_patient_records
+    columns:
+      - name: pat_id
+        tests: [unique, not_null]
+  - name: transformed_encounters
+    columns:
+      - name: enc_id
+        tests: [unique, not_null]
+  - name: transformed_billing_transactions
+    columns:
+      - name: txn_id
+        tests: [unique, not_null]

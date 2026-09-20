@@ -124,7 +124,7 @@ Copy `.env.example` to `.env` and fill in your own values. **Never commit `.env`
 | Variable | Required | Default | Description |
 |---|---|---|---|
 | `LLM_API_KEY` | Yes | — | Google AI Studio API key, used by `agents/ai_mapper.py` and `agents/doc_generator.py`. Free, no card required — get one at [aistudio.google.com](https://aistudio.google.com) ("Get API key"). |
-| `LLM_MODEL` | No | `gemini-3.5-flash-lite` | Which Gemini model to call. `gemini-3.5-flash-lite` is recommended over the base Flash model — it has a higher free-tier rate limit (~30 RPM vs ~10-15 RPM), which matters because `ai_mapper` makes one call per column (~25-30 calls per run). |
+| `LLM_MODEL` | No | `gemini-2.0-flash` | Which Gemini model to call. `gemini-2.0-flash-lite` is recommended over the base Flash model — it has a higher free-tier rate limit (~30 RPM vs ~10-15 RPM), which matters because `ai_mapper` makes one call per column (~25-30 calls per run). |
 | `LLM_CALL_DELAY_SECONDS` | No | `4.5` | Seconds to wait between successive `ai_mapper` LLM calls, to stay under Gemini's free-tier requests-per-minute limit. Raise this (e.g. to `6`) if you still hit rate limits on a stricter model/tier. |
 
 #### Source database (legacy MySQL)
@@ -185,6 +185,23 @@ Outputs land in `artifacts/` (`schema_profile.json`, `mappings.json`,
 `transformation_rules.json`, `reconciliation_report.json`) and
 `docs/target_data_dictionary.md`.
 
+### Applying the approved transformations in Snowflake
+
+The pipeline above loads raw structural data into `stg_<table>` in
+Snowflake. To actually apply the approved rename + value-transformation
+logic (turning raw codes like `'W'` into their real meaning) and get a
+pass/fail test record:
+
+```bash
+python validation/generate_dbt_models.py
+cd validation/dbt_models
+dbt run
+dbt test
+```
+
+Re-run both the generator and `dbt run` any time `transformation_rules.json`
+changes (e.g. after correcting a mapping via `python main.py review`).
+
 ## How to Rollback a Failed Migration
 
 This pipeline is **read-only against the source database** by design — no
@@ -228,11 +245,15 @@ On the target side:
   currently validates the extracted DataFrame implicitly through the
   post-load checkpoint rather than as a fully separate pass — worth
   splitting out if you want the extra rigor.
-- **Value-level transformation logic**: `migration_executor` currently
-  performs structural extract/rename/load; the `logic` field's CASE-style
-  value transformations (e.g. `'A' → 'Active'`) are intended to be applied
-  and tested via the dbt models in `validation/dbt_models/`, which ship as a
-  starter template — extend them per your actual generated mappings.
+- **Value-level transformation logic is now applied**, not just documented:
+  `migration_executor` performs a pure structural extract/load (original
+  column names preserved), and `validation/generate_dbt_models.py` reads
+  `artifacts/transformation_rules.json` and generates one dbt model per
+  table under `validation/dbt_models/models/marts/` that applies both the
+  rename AND the approved value-level logic (the `CASE WHEN...`
+  expressions). Run the generator after every pipeline run (including
+  after redoing a human review) and re-run `dbt run` to refresh — the
+  generated `.sql` files are marked auto-generated and get overwritten.
 - **PII handling**: `schema_profiler` currently samples raw column values
   (including `ssn_enc`) into the JSON profile that gets sent to the LLM.
   For real sensitive data, redact or hash sensitive columns before they

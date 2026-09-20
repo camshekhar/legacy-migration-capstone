@@ -72,21 +72,19 @@ def migrate_table(source_engine, target_engine, table: str, rules: list[dict], r
     df = _with_retry(extract)
     source_rows = len(df)
 
-    rename_map = {}
-    for rule in rules:
-        _, col = rule["source_column"].split(".")
-        rename_map[col] = rule["target_column"]
-        # NOTE: `logic` for status-code CASE expressions is intentionally applied
-        # via SQL post-load (dbt models) rather than in pandas here, to keep the
-        # transformation logic in one auditable, testable place (see
-        # validation/dbt_models). This executor performs the structural
-        # extract-and-load; dbt performs and tests the value-level transforms.
-
-    target_df = df.rename(columns=rename_map)
+    # Deliberately NOT renaming or transforming columns here. This executor's
+    # only job is structural extract-and-load, preserving original source
+    # column names exactly. Both the rename (source_column -> target_column)
+    # AND the value-level transformation (the `logic` CASE expressions) are
+    # applied together downstream by the generated dbt models -- see
+    # validation/generate_dbt_models.py, which reads transformation_rules.json
+    # and emits one model per table. Keeping the staging load column-preserving
+    # means the `logic` field's SQL (which references original column names)
+    # is valid when dbt runs against it.
     target_table_name = f"stg_{table}"
 
     def load():
-        target_df.to_sql(target_table_name, target_engine, if_exists="replace", index=False)
+        df.to_sql(target_table_name, target_engine, if_exists="replace", index=False)
 
     _with_retry(load)
 
@@ -94,8 +92,8 @@ def migrate_table(source_engine, target_engine, table: str, rules: list[dict], r
         "table": table,
         "target_table": target_table_name,
         "source_row_count": source_rows,
-        "loaded_row_count": len(target_df),
-        "columns_migrated": list(rename_map.values()),
+        "loaded_row_count": len(df),
+        "columns_migrated": list(df.columns),
     }
     log_event("migration_executed", result, run_id=run_id)
     return result

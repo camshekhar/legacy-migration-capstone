@@ -53,12 +53,131 @@
         "exception_message": null,
         "exception_traceback": null
       }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "prov_nm",
+          "result_format": "SUMMARY"
+        },
+        "meta": {}
+      },
+      "result": {
+        "element_count": 40,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "partial_unexpected_list": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_message": null,
+        "exception_traceback": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "prov_spec_cd",
+          "result_format": "SUMMARY"
+        },
+        "meta": {}
+      },
+      "result": {
+        "element_count": 40,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "partial_unexpected_list": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_message": null,
+        "exception_traceback": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "column": "prov_spec_cd",
+          "value_set": [
+            "GEN",
+            "ORT",
+            "CAR",
+            "ONC",
+            "PED"
+          ],
+          "mostly": 0.95,
+          "result_format": "SUMMARY"
+        },
+        "meta": {}
+      },
+      "result": {
+        "element_count": 40,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_message": null,
+        "exception_traceback": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "column": "prov_active_flg",
+          "value_set": [
+            1,
+            0
+          ],
+          "mostly": 0.95,
+          "result_format": "SUMMARY"
+        },
+        "meta": {}
+      },
+      "result": {
+        "element_count": 40,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_message": null,
+        "exception_traceback": null
+      }
     }
   ],
   "evaluation_parameters": {},
   "statistics": {
-    "evaluated_expectations": 2,
-    "successful_expectations": 2,
+    "evaluated_expectations": 6,
+    "successful_expectations": 6,
     "unsuccessful_expectations": 0,
     "success_percent": 100.0
   },
@@ -67,14 +186,14 @@
     "expectation_suite_name": "default",
     "run_id": {
       "run_name": null,
-      "run_time": "2026-09-08T14:20:13.160788+05:30"
+      "run_time": "2026-09-20T14:29:35.354106+05:30"
     },
     "batch_kwargs": {
-      "ge_batch_id": "4e285950-ab62-11f1-aef2-b047e94c2c86"
+      "ge_batch_id": "9a33371e-b4d1-11f1-818d-cec9ca0d32d3"
     },
     "batch_markers": {},
     "batch_parameters": {},
-    "validation_time": "20260908T085013.160788Z",
+    "validation_time": "20260920T085935.354106Z",
     "expectation_suite_meta": {
       "great_expectations_version": "0.18.19"
     }

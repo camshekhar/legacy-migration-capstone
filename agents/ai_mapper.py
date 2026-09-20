@@ -19,7 +19,7 @@ import sys
 import time
 import uuid
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from google.api_core.exceptions import ResourceExhausted
@@ -46,6 +46,25 @@ class ColumnMapping(BaseModel):
     edge_cases: list[str] = Field(description="Known or suspected edge cases in the data")
     confidence: float = Field(description="0.0 to 1.0 confidence in this mapping", ge=0.0, le=1.0)
     reasoning: str = Field(description="Why the agent reached this conclusion")
+
+    @field_validator("edge_cases", mode="before")
+    @classmethod
+    def _coerce_edge_cases_to_strings(cls, v):
+        # Gemini's structured output occasionally wraps a free-text edge case
+        # as {"description": "..."} instead of a plain string, which fails
+        # validation against list[str]. Flatten anything non-string back to
+        # text rather than erroring out mid-pipeline.
+        if not isinstance(v, list):
+            return v
+        coerced = []
+        for item in v:
+            if isinstance(item, str):
+                coerced.append(item)
+            elif isinstance(item, dict):
+                coerced.append(item.get("description") or json.dumps(item))
+            else:
+                coerced.append(str(item))
+        return coerced
 
 
 SYSTEM_PROMPT = """You are a data migration assistant helping migrate a legacy \

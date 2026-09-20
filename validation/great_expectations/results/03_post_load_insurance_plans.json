@@ -90,12 +90,166 @@
         "exception_message": null,
         "exception_traceback": null
       }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "plan_nm",
+          "result_format": "SUMMARY"
+        },
+        "meta": {}
+      },
+      "result": {
+        "element_count": 5,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "partial_unexpected_list": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_message": null,
+        "exception_traceback": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "column": "plan_nm",
+          "value_set": [
+            "Rodriguez, Figueroa and Sanchez Health Plan",
+            "Doyle Ltd Health Plan",
+            "Mcclain, Miller and Henderson Health Plan",
+            "Davis and Sons Health Plan",
+            "Guzman, Hoffman and Baldwin Health Plan"
+          ],
+          "mostly": 0.95,
+          "result_format": "SUMMARY"
+        },
+        "meta": {}
+      },
+      "result": {
+        "element_count": 5,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_message": null,
+        "exception_traceback": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "plan_typ_cd",
+          "result_format": "SUMMARY"
+        },
+        "meta": {}
+      },
+      "result": {
+        "element_count": 5,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "partial_unexpected_list": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_message": null,
+        "exception_traceback": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "column": "plan_typ_cd",
+          "value_set": [
+            "H",
+            "P",
+            "M",
+            "X"
+          ],
+          "mostly": 0.95,
+          "result_format": "SUMMARY"
+        },
+        "meta": {}
+      },
+      "result": {
+        "element_count": 5,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_message": null,
+        "exception_traceback": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "column": "plan_active",
+          "value_set": [
+            1
+          ],
+          "mostly": 0.95,
+          "result_format": "SUMMARY"
+        },
+        "meta": {}
+      },
+      "result": {
+        "element_count": 5,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_counts": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_message": null,
+        "exception_traceback": null
+      }
     }
   ],
   "evaluation_parameters": {},
   "statistics": {
-    "evaluated_expectations": 3,
-    "successful_expectations": 3,
+    "evaluated_expectations": 8,
+    "successful_expectations": 8,
     "unsuccessful_expectations": 0,
     "success_percent": 100.0
   },
@@ -104,14 +258,14 @@
     "expectation_suite_name": "default",
     "run_id": {
       "run_name": null,
-      "run_time": "2026-09-08T14:20:11.545912+05:30"
+      "run_time": "2026-09-20T14:29:33.871920+05:30"
     },
     "batch_kwargs": {
-      "ge_batch_id": "4d313fc2-ab62-11f1-9a00-b047e94c2c86"
+      "ge_batch_id": "994e47d8-b4d1-11f1-9dbd-cec9ca0d32d3"
     },
     "batch_markers": {},
     "batch_parameters": {},
-    "validation_time": "20260908T085011.545912Z",
+    "validation_time": "20260920T085933.871920Z",
     "expectation_suite_meta": {
       "great_expectations_version": "0.18.19"
     }

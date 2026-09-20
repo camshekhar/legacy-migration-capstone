@@ -13,3 +13,9 @@ dbt_models/target/
 dbt_models/logs/
 dbt_models/dbt_packages/
 .DS_Store
+
+**/dbt_models/target/
+**/dbt_models/logs/
+**/dbt_models/dbt_packages/
+**/dbt_models/profiles.yml
+**/dbt_models/.user.yml
